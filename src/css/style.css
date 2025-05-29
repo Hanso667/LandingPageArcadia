@@ -321,3 +321,59 @@ a:active {
     }
 
 }
+
+@media only screen and (max-width: 550px) {
+
+    header,
+    main,
+    footer {
+        width: 80%;
+    }
+    #navigator{
+        width: 400px;
+    } 
+
+    a {
+        width: 15px;
+        height: 45px;
+    }
+
+    .nav-Text {
+        font-size: xx-small;
+    }
+
+    #AboutMe-titulo {
+        font-size: x-small;
+    }
+
+    #AboutMe {
+        font-size: xx-small;
+    }
+
+    .container {
+        width: 300px;
+    }
+
+    .card-View {
+        grid-template-columns: repeat(2, 125px);
+        grid-template-rows: repeat(4, 165px);
+    }
+
+    .card-View-fans {
+        grid-template-columns: repeat(1, 280px);
+        grid-template-rows: repeat(3, 230px);
+        gap: 50px;
+    }
+
+    .teste-fans-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .teste-fans-texto {
+        height: 190px;
+        width: 190px;
+        font-size: 8px;
+    }
+
+}
