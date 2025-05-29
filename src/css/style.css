@@ -267,6 +267,10 @@ a:active {
 /* Celulares */
 @media only screen and (max-width: 768px) {
 
+    body {
+        height: 415vh;
+    }
+
     header,
     main,
     footer {
@@ -323,15 +327,19 @@ a:active {
 }
 
 @media only screen and (max-width: 550px) {
+    body {
+        height: 315vh;
+    }
 
     header,
     main,
     footer {
         width: 80%;
     }
-    #navigator{
+
+    #navigator {
         width: 370px;
-    } 
+    }
 
     a {
         width: 15px;
