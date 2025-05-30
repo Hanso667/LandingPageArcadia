@@ -346,6 +346,13 @@ a:active {
     width: 80%;
     height: 80px;
 }
+#copyright{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
 
 /* MEDIA QUERIES */
 @media (max-width: 1024px) {
