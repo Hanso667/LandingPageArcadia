@@ -1,74 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArcadiaCore</title>
+
     <link rel="stylesheet" href="src/css/reset.css">
     <link rel="stylesheet" href="src/css/style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> ArcadiaCore </title>
 </head>
 
 <body>
 
     <header>
-
-        <image src="src/img/Banner.png" class="container" id="banner"></image>
+        <img src="src/img/Banner.png" class="container" id="banner" alt="Banner do ArcadiaCore">
 
         <nav id="navigator" class="container">
             <a href="#home">
-                <p class="nav-Text"> Home </p>
+                <p class="nav-Text">Home</p>
             </a>
             <a href="#Trailer">
-                <p class="nav-Text"> Trailer </p>
+                <p class="nav-Text">Trailer</p>
             </a>
             <a href="#Games">
-                <p class="nav-Text"> Games </p>
+                <p class="nav-Text">Games</p>
             </a>
             <a href="#Fans">
-                <p class="nav-Text"> Fans </p>
+                <p class="nav-Text">Fans</p>
             </a>
             <a href="#Contato">
-                <p class="nav-Text"> Contato </p>
+                <p class="nav-Text">Contato</p>
             </a>
         </nav>
-
     </header>
 
     <main>
-
         <section id="Trailer">
-            <iframe id="trailer" class="container" width="853" height="480" src="https://www.youtube.com/embed/cWBwFhUv1-8" title="Dark Souls III – Launch Trailer | PS4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe id="trailer" class="container" width="853" height="480"
+                src="https://www.youtube.com/embed/cWBwFhUv1-8" title="Dark Souls III – Launch Trailer | PS4"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
             </iframe>
         </section>
 
         <section id="home">
             <div id="Home" class="container">
-                <t1 id="AboutMe-titulo">Sobre Nós</t1>
-                <p id="AboutMe">Somos um estúdio de games apaixonado por criar experiências inesquecíveis.<br>
-                    <br>
+                <h1 id="AboutMe-titulo">Sobre Nós</h1>
+                <p id="AboutMe">
+                    Somos um estúdio de games apaixonado por criar experiências inesquecíveis.<br><br>
                     Desde o primeiro conceito até o último frame, nossa missão é contar histórias envolventes,
-                    desafiar<br>
-                    a criatividade e entregar jogos que conectem pessoas ao redor do mundo. Acreditamos que os games
-                    são<br>
-                    mais do que entretenimento — são uma forma de arte, expressão e comunidade.<br>
-                    <br>
-                    Com uma equipe formada por desenvolvedores, artistas, roteiristas e sonhadores, unimos tecnologia
-                    e<br>
-                    imaginação para dar vida a mundos únicos, personagens marcantes e jogabilidades que deixam
-                    aquele<br>
-                    gostinho de “só mais uma partida”.<br>
-                    <br>
+                    desafiar a criatividade e entregar jogos que conectem pessoas ao redor do mundo.<br><br>
+                    Acreditamos que os games são mais do que entretenimento — são uma forma de arte, expressão e
+                    comunidade.<br><br>
+                    Com uma equipe formada por desenvolvedores, artistas, roteiristas e sonhadores, unimos tecnologia e
+                    imaginação
+                    para dar vida a mundos únicos, personagens marcantes e jogabilidades que deixam aquele gostinho de
+                    “só mais uma partida”.<br><br>
                     Estamos só começando, e mal podemos esperar para mostrar a você o que vem por aí.
                 </p>
             </div>
         </section>
 
-        <section id="Games" >
+        <section id="Games">
             <div class="card-View container" id="card-View">
+                <!-- Cards de jogos serão inseridos aqui -->
             </div>
         </section>
 
@@ -76,57 +76,63 @@
             <div class="card-View-fans container">
 
                 <div class="Teste-fans">
-                    <img src="src/img/Pessoas/p2.jpg" class="teste-fans-image">
+                    <img src="src/img/Pessoas/p2.jpg" class="teste-fans-image" alt="Foto de Ana Rodrigues">
                     <div class="teste-fans-texto">
-                        <t1>nome: Ana Rodrigues – @GamerAna</t1>
-                        <p>"Os jogos desse estúdio sempre me surpreendem! Histórias envolventes, gráficos incríveis <br>
+                        <h1>nome: Ana Rodrigues – @GamerAna</h1>
+                        <p>
+                            "Os jogos desse estúdio sempre me surpreendem! Histórias envolventes, gráficos incríveis
                             e uma atenção aos detalhes que faz toda a diferença. Virei fã desde o primeiro lançamento!"
                         </p>
                     </div>
                 </div>
+
                 <div class="Teste-fans">
-                    <img src="src/img/Pessoas/p1.jpg" class="teste-fans-image">
+                    <img src="src/img/Pessoas/p1.jpg" class="teste-fans-image" alt="Foto de Lucas Almeida">
                     <div class="teste-fans-texto">
-                        <t1>nome: Lucas Almeida – @Luc4sPlay</t1>
-                        <p>"É raro encontrar um estúdio tão comprometido com a experiência do jogador. Cada game tem
-                            <br>
+                        <h1>nome: Lucas Almeida – @Luc4sPlay</h1>
+                        <p>
+                            "É raro encontrar um estúdio tão comprometido com a experiência do jogador. Cada game tem
                             alma própria, dá pra ver o carinho e dedicação da equipe em cada fase!"
                         </p>
                     </div>
                 </div>
+
                 <div class="Teste-fans">
-                    <img src="src/img/Pessoas/p3.jpg" class="teste-fans-image">
+                    <img src="src/img/Pessoas/p3.jpg" class="teste-fans-image" alt="Foto de Carla Menezes">
                     <div class="teste-fans-texto">
-                        <t1>nome: Carla Menezes – @CarlinhaXP</t1>
-                        <p>"A criatividade desse estúdio é fora do comum. Toda vez que anunciam um novo jogo, já sei
-                            que<br>
-                            vem coisa boa. Diversão garantida, com qualidade de sobra!"</p>
+                        <h1>nome: Carla Menezes – @CarlinhaXP</h1>
+                        <p>
+                            "A criatividade desse estúdio é fora do comum. Toda vez que anunciam um novo jogo, já sei
+                            que vem coisa boa. Diversão garantida, com qualidade de sobra!"
+                        </p>
                     </div>
                 </div>
 
             </div>
         </section>
-
     </main>
 
     <footer>
         <section id="Contato">
             <div id="foot" class="container">
-                <div id="Formulario">
+                <form action="https://formsubmit.co/fabriciolacerdamoraes2005@gmail.com" method="POST">
                     <label for="Email">Email</label>
-                    <input id="Email" type="email">
-                    <label for="Nome">Nome</label>
-                    <input id="Nome" type="text">
-                    <textarea id="Mensagem"></textarea>
-                    <input type="submit">
-                </div>
+                    <input id="Email" name="email" type="email" placeholder="seuemail@exemplo.com" required>
 
+                    <label for="Nome">Nome</label>
+                    <input id="Nome" name="nome" type="text" placeholder="Seu nome" required><br>
+
+                    <label for="Mensagem">Mensagem</label><br>
+                    <textarea id="Mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem aqui..."
+                        required></textarea>
+
+                    <input type="submit" value="Enviar">
+                </form>
             </div>
         </section>
-
     </footer>
+
     <script src="src/scripts/script.js"></script>
 </body>
-
 
 </html>

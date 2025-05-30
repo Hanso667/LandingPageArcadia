@@ -3,41 +3,44 @@ html,
 body,
 * {
     font-family: "Press Start 2P", cursive;
-
+    box-sizing: border-box;
 }
 
 body {
     background-image: url('../img/BodyBg.jpg');
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 534vh;
     background-color: #121212;
     gap: 57px;
+    margin: 0;
+    padding: 0;
 }
 
 /* ELEMENTOS PRINCIPAIS */
 header,
 main,
 footer {
-    padding: 40px;
+    padding: 2rem;
     width: 90%;
+    max-width: 1200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-image: radial-gradient(circle at center, #2c0e5a, #431c9c, #2c0e5a);
     border-radius: 15px;
-    gap: 15px;
+    gap: 1rem;
     box-shadow: 0 0 30px 6px rgba(103, 58, 183, 0.6);
 }
 
 .container {
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
     border-radius: 15px;
     background-color: #f9f9f9;
     border: 5px solid #00c6ff;
@@ -48,21 +51,20 @@ footer {
 a,
 a:visited {
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: bold;
     color: rgb(0, 68, 68);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px 25px;
-    width: 150px;
-    height: 60px;
+    padding: 0.8rem 1.2rem;
+    min-width: 120px;
+    min-height: 50px;
     background: linear-gradient(145deg, #00f0ff, #00d9ff);
     border-radius: 12px;
     border: 3px solid #0ff;
     box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, inset 0 0 5px #0ff;
     transition: all 0.2s ease-in-out;
-    position: relative;
 }
 
 a:hover {
@@ -76,32 +78,34 @@ a:active {
 }
 
 .nav-Text {
-    font-size: x-large;
+    font-size: 1.2rem;
 }
-
 
 /* SEÇÕES */
 #Home,
 #banner,
 #trailer {
-    height: 300px;
+    min-height: 300px;
+    width: 60rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 1rem;
 }
 
 #navigator {
-    height: 130px;
+    min-height: 130px;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    gap: 1rem;
 }
 
 #foot {
-    height: 250px;
+    min-height: 250px;
+    width: 60rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,27 +114,44 @@ a:active {
 /* GRIDS */
 .card-View,
 .card-View-fans {
-    width: 1200px;
+    width: 100%;
     border-radius: 15px;
     background-color: #f9f9f9;
     border: 5px solid #00c6ff;
     box-shadow: 0 0 12px 3px rgba(0, 198, 255, 0.4);
     padding: 25px 0;
     display: grid;
-    justify-content: center;
     gap: 20px;
 }
 
-.card-View {
-    grid-template-columns: repeat(4, 250px);
-    grid-template-rows: repeat(2, 350px);
-    height: 720px;
+.card-View-fans {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px 20px; /* ← inclui padding lateral */
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* ou mais, conforme o conteúdo */
+    grid-auto-rows: auto;
+    gap: 20px;
+    background-color: #f9f9f9;
+    border: 5px solid #00c6ff;
+    border-radius: 15px;
+    box-shadow: 0 0 12px 3px rgba(0, 198, 255, 0.4);
 }
 
-.card-View-fans {
-    grid-template-columns: repeat(1, 1100px);
-    grid-template-rows: repeat(5, 250px);
-    height: 800px;
+.card-View {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px 20px; /* ← Adiciona padding lateral */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 350px);
+    gap: 20px;
+    background-color: #f9f9f9;
+    border: 5px solid #00c6ff;
+    border-radius: 15px;
+    box-shadow: 0 0 12px 3px rgba(0, 198, 255, 0.4);
 }
 
 /* CARDS */
@@ -140,16 +161,49 @@ a:active {
     border-radius: 25px;
     border: 2px solid #00c6ff;
     box-shadow: 0 0 12px 4px rgba(0, 140, 200, 0.5);
-    transition: 1s;
+    transition: transform 0.3s ease;
+    z-index: 2;
+    position: relative;
+    width: 250px;
+    height: 350px;
+    overflow: hidden;
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+.Cardimage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.5s;
+}
+
+.card-text {
+    position: absolute;
+    bottom: -100%; /* Esconde o texto inicialmente */
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    transition: bottom 0.4s ease;
+    overflow-y: auto;
+}
+
+.Teste:hover .card-text {
+    bottom: 0; /* Mostra o texto quando o mouse passa por cima */
+}
+
+.Teste-fans:hover {
+    transform: scale(1.05);
 }
 
 .Teste {
     width: 100%;
     height: 100%;
-}
-
-.Teste:hover {
-    transform: scale(1.05);
 }
 
 .Teste-fans {
@@ -160,48 +214,40 @@ a:active {
     width: 100%;
     height: 100%;
     gap: 20px;
-}
-
-.Teste-fans:hover {
-    transform: scale(1.05);
+    flex-wrap: wrap;
 }
 
 .teste-fans-image {
     border-radius: 15px;
     border: 2px solid #fff;
-    width: 220px;
-    height: 220px;
-    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
 }
 
 .teste-fans-texto {
+    flex: 1;
+    min-width: 250px;
+    height: auto;
+    padding: 10px;
+    font-size: 0.8rem;
     display: flex;
     flex-direction: column;
-    background-color: #fff;
-    border-radius: 15px;
-    border: 2px solid #000;
-    width: 800px;
-    height: 150px;
-    gap: 30px;
-    padding: 5px;
+    gap: 10px;
+    color: white;
 }
 
+/* SOBRE */
 #AboutMe-titulo {
-    font-size: larger;
+    font-size: 1rem;
     text-shadow: 3px 3px 2px #0000002c;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    max-width: 100%;
     text-align: center;
 }
 
 #AboutMe {
-    font-size: small;
+    font-size: 0.8rem;
     text-align: center;
     text-shadow: 3px 3px 2px #0000002c;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    max-width: 100%;
 }
 
 #Formulario {
@@ -218,115 +264,17 @@ a:active {
     height: 80px;
 }
 
-
-/* MEDIA QUERIES PARA RESPONSIVIDADE */
-
-/* Tablets */
-@media only screen and (max-width: 1302px) {
-
-    body {
-        height: 615vh;
-    }
-
-    header,
-    main,
-    footer {
-        width: 75%;
-    }
-
-    a {
-        width: 40px;
-        height: 40px;
-    }
-
-    .nav-Text {
-        font-size: small;
-    }
-
-
-    .container {
-        width: 600px;
-    }
-
-    #AboutMe-titulo {
-        font-size: smaller;
-    }
-
-    #AboutMe {
-        font-size: x-small;
-    }
-
+/* MEDIA QUERIES */
+@media (max-width: 1024px) {
     .card-View {
-        grid-template-columns: repeat(2, 220px);
-        grid-template-rows: repeat(4, 165px);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 300px);
     }
-
-    .card-View-fans {
-        grid-template-columns: repeat(1, 550px);
-        grid-template-rows: repeat(3, 230px);
-        gap: 50px;
-    }
-
-    .teste-fans-image {
-        width: 150px;
-        height: 150px;
-    }
-
-    .teste-fans-texto {
-        height: 170px;
-        width: 330px;
-        font-size: small;
-    }
-
-
-
-
 }
 
-/* Celulares */
 @media only screen and (max-width: 768px) {
-
-
-    header,
-    main,
-    footer {
-        width: 85%;
-    }
-
-}
-
-/* Smartphones pequenos */
-@media only screen and (max-width: 630px) {
-
-    header,
-    main,
-    footer {
-        width: 70%;
-    }
-
-    a {
-        width: 15px;
-        height: 45px;
-    }
-
-    .nav-Text {
-        font-size: xx-small;
-    }
-
-
-    .container {
-        width: 400px;
-    }
-
-    .card-View {
-        grid-template-columns: repeat(2, 150px);
-        grid-template-rows: repeat(4, 165px);
-    }
-
-    .card-View-fans {
-        grid-template-columns: repeat(1, 350px);
-        grid-template-rows: repeat(3, 230px);
-        gap: 50px;
+    .teste-fans-texto {
+        font-size: 0.7rem;
     }
 
     .teste-fans-image {
@@ -334,56 +282,28 @@ a:active {
         height: 150px;
     }
 
-    .teste-fans-texto {
-        height: 180px;
-        width: 150px;
-        font-size: xx-small;
-    }
-
-}
-
-@media only screen and (max-width: 550px) {
-
-    header,
-    main,
-    footer {
-        width: 80%;
-    }
-
-    #navigator {
-        width: 370px;
-    }
-
     a {
-        width: 15px;
-        height: 45px;
-    }
-
-    .nav-Text {
-        font-size: xx-small;
-    }
-
-    #AboutMe-titulo {
-        font-size: x-small;
-    }
-
-    #AboutMe {
-        font-size: xx-small;
-    }
-
-    .container {
-        width: 300px;
+        font-size: 0.8rem;
+        padding: 10px 15px;
+        min-width: 100px;
+        min-height: 40px;
     }
 
     .card-View {
-        grid-template-columns: repeat(2, 125px);
-        grid-template-rows: repeat(4, 165px);
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 280px);
+        padding: 20px 10px;
     }
 
     .card-View-fans {
-        grid-template-columns: repeat(1, 280px);
-        grid-template-rows: repeat(3, 230px);
-        gap: 50px;
+        grid-template-columns: 1fr;
+        padding: 20px 15px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .teste-fans-texto {
+        font-size: 0.6rem;
     }
 
     .teste-fans-image {
@@ -391,10 +311,26 @@ a:active {
         height: 120px;
     }
 
-    .teste-fans-texto {
-        height: 190px;
-        width: 190px;
-        font-size: 8px;
+    .nav-Text {
+        font-size: 0.6rem;
     }
 
+    a {
+        font-size: 0.7rem;
+        padding: 8px 12px;
+        min-width: 80px;
+        min-height: 35px;
+    }
+
+    header,
+    main,
+    footer {
+        padding: 1rem;
+    }
+
+    .card-View {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 250px);
+        gap: 15px;
+    }
 }
