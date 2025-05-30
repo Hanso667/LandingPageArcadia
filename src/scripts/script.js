@@ -75,3 +75,37 @@ document.getElementById('formulario').addEventListener('submit', function (e) {
             alert('Erro na conexão. Tente novamente mais tarde.');
         });
 });
+
+let button = document.getElementById('Hambutton')
+let nav = document.getElementById('navigator')
+
+
+
+
+function hamButton() {
+    if (nav.style.display == 'none') {
+        button.textContent = "X"
+        nav.style.display = 'flex';
+
+    } else if (nav.style.display =='flex') {
+        nav.style.display = 'none';
+        button.textContent = "☰"
+
+    }
+
+}
+
+
+function handleResize() {
+    if (window.innerWidth < 980) {
+        nav.style.display = 'none';
+    } else {
+        nav.style.display = 'flex'; // or whatever default you want
+    }
+}
+
+// Initial check
+handleResize();
+
+// Update on resize
+window.addEventListener('resize', handleResize);
