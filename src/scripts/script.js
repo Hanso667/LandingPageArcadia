@@ -45,3 +45,33 @@ imgs.forEach(Imagem => {
     Card.appendChild(overlay);
     document.getElementById('card-View').appendChild(Card);
 });
+
+document.getElementById('formulario').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const captcha = document.getElementById('captchaCheck');
+    if (!captcha.checked) {
+        alert('Por favor, confirme que você não é um robô.');
+        return;
+    }
+
+    // Se captcha ok, envia o form via fetch para não sair da página
+    const form = e.target;
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+        method: 'POST',
+        body: formData,
+    })
+        .then(response => {
+            if (response.ok) {
+                alert('Mensagem enviada com sucesso! Obrigado pelo contato.');
+                form.reset();
+            } else {
+                alert('Erro ao enviar a mensagem. Tente novamente.');
+            }
+        })
+        .catch(() => {
+            alert('Erro na conexão. Tente novamente mais tarde.');
+        });
+});

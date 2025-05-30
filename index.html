@@ -120,18 +120,25 @@
                     <input id="Email" name="email" type="email" placeholder="seuemail@exemplo.com" required>
 
                     <label for="Nome">Nome</label>
-                    <input id="Nome" name="nome" type="text" placeholder="Seu nome" required><br>
+                    <input id="Nome" name="nome" type="text" placeholder="Seu nome" required>
 
-                    <label for="Mensagem">Mensagem</label><br>
+                    <label for="Mensagem">Mensagem</label>
                     <textarea id="Mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem aqui..."
                         required></textarea>
+
+                    <label>
+                        <input type="checkbox" id="captchaCheck" required>
+                        Não sou um robô
+                    </label>
+
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="box">
 
                     <input type="submit" value="Enviar">
                 </form>
             </div>
         </section>
     </footer>
-
     <script src="src/scripts/script.js"></script>
 </body>
 
