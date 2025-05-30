@@ -24,11 +24,11 @@ let titulos = {
 
 imgs.forEach(Imagem => {
     let Card = document.createElement('div');
-    Card.className = 'Teste';
+    Card.className = 'card';
 
     let Cardimage = document.createElement('img');
     Cardimage.src = `src/img/games/${Imagem}.png`;
-    Cardimage.className = 'Cardimage';
+    Cardimage.className = 'cardimage';
     Card.appendChild(Cardimage);
 
     let overlay = document.createElement('div');

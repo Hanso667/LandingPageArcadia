@@ -217,8 +217,8 @@ a:active {
 }
 
 /* CARDS */
-.Teste,
-.Teste-fans {
+.card,
+.card-fans {
     background-color: #0d0d30;
     border-radius: 25px;
     border: 2px solid #00c6ff;
@@ -233,7 +233,7 @@ a:active {
     cursor: pointer;
 }
 
-.Cardimage {
+.cardimage {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -254,20 +254,20 @@ a:active {
     overflow-y: auto;
 }
 
-.Teste:hover .card-text {
+.card:hover .card-text {
     bottom: 0;
 }
 
-.Teste-fans:hover {
+.card-fans:hover {
     transform: scale(1.05);
 }
 
-.Teste {
+.card {
     width: 100%;
     height: 100%;
 }
 
-.Teste-fans {
+.card-fans {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -278,24 +278,33 @@ a:active {
     flex-wrap: wrap;
 }
 
-.teste-fans-image {
+.card-fans-image {
     border-radius: 15px;
     border: 2px solid #fff;
     width: 200px;
     height: 200px;
     object-fit: cover;
 }
-
-.teste-fans-texto {
-    flex: 1;
+.card-fans-texto h1 {
     min-width: 250px;
+    max-width: 750px;
     height: auto;
     padding: 10px;
     font-size: 0.8rem;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
     color: white;
+    border: 1px solid white;
+    background-color: black;
+}
+.card-fans-texto p {
+    min-width: 250px;
+    max-width: 750px;
+    max-height: 150px;
+    height: auto;
+    padding: 10px;
+    font-size: 0.7rem;
+    color: white;
+    border: 1px solid white;
+    background-color: black;
 }
 
 /* SOBRE */
@@ -417,14 +426,13 @@ a:active {
     #formulario input[type="submit"] {
         font-size: 0.9rem;
     }
-    .nav-Text{
+    .nav-Text {
         font-size: small;
     }
 }
 
 @media only screen and (max-width: 300px) {
-    .nav-Text{
+    .nav-Text {
         font-size: x-small;
     }
 }
-
