@@ -406,9 +406,15 @@ a:active {
 
 @media only screen and (max-width: 980px) {
     #navigator {
-        width: 50%;
+        width: 60%;
         flex-direction: column;
         display: none;
+    }
+    a{
+        width: 80%;
+    }
+    .nav-Text{
+        font-size: large;
     }
 
     #Hambutton {
@@ -424,13 +430,6 @@ a:active {
     .teste-fans-image {
         width: 150px;
         height: 150px;
-    }
-
-    a {
-        font-size: 0.8rem;
-        padding: 10px 15px;
-        min-width: 100px;
-        min-height: 40px;
     }
 
     .card-View {
@@ -460,17 +459,6 @@ a:active {
     .teste-fans-image {
         width: 120px;
         height: 120px;
-    }
-
-    .nav-Text {
-        font-size: 0.6rem;
-    }
-
-    a {
-        font-size: 0.7rem;
-        padding: 8px 12px;
-        min-width: 80px;
-        min-height: 35px;
     }
 
     header,
