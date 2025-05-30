@@ -421,3 +421,10 @@ a:active {
         font-size: small;
     }
 }
+
+@media only screen and (max-width: 300px) {
+    .nav-Text{
+        font-size: x-small;
+    }
+}
+
