@@ -348,7 +348,7 @@ a:active {
 
 @media only screen and (max-width: 980px) {
     #navigator {
-        width: 60%;
+        width: 80%;
         flex-direction: column;
         display: none;
     }
@@ -416,5 +416,8 @@ a:active {
     }
     #formulario input[type="submit"] {
         font-size: 0.9rem;
+    }
+    .nav-Text{
+        font-size: small;
     }
 }
