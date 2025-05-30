@@ -267,9 +267,6 @@ a:active {
 /* Celulares */
 @media only screen and (max-width: 768px) {
 
-    body {
-        height: 415vh;
-    }
 
     header,
     main,
