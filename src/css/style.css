@@ -7,6 +7,7 @@ body,
 }
 
 body {
+    background-color: #121212;
     background-image: url('../img/BodyBg.jpg');
     background-size: contain;
     background-position: center;
@@ -15,7 +16,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #121212;
     gap: 57px;
     margin: 0;
     padding: 0;
@@ -23,7 +23,8 @@ body {
 
 /* ELEMENTOS PRINCIPAIS */
 header,
-footer {
+footer,
+main {
     padding: 2rem;
     width: 90%;
     max-width: 1200px;
@@ -31,27 +32,15 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: radial-gradient(circle at center, #2c0e5a, #431c9c, #2c0e5a);
     border-radius: 15px;
-    gap: 1rem;
-    box-shadow: 0 0 30px 6px rgba(103, 58, 183, 0.6);
+    background-color: #2c0e5a;
+    box-shadow: 0 0 30px 6px rgba(0, 198, 255, 0.4);
 }
 
 main {
     width: 100%;
-    max-width: 1200px;
-    /* ou um valor maior, tipo 1400px, se quiser mais largo */
-    padding: 2rem;
     margin: 0 auto;
-    /* centraliza em telas grandes */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 1rem;
-    background-image: radial-gradient(circle at center, #2c0e5a, #431c9c, #2c0e5a);
-    border-radius: 15px;
-    box-shadow: 0 0 30px 6px rgba(103, 58, 183, 0.6);
 }
 
 .container {
@@ -69,28 +58,28 @@ a:visited {
     text-decoration: none;
     font-size: 1rem;
     font-weight: bold;
-    color: rgb(0, 68, 68);
+    color: #000;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0.8rem 1.2rem;
     min-width: 120px;
     min-height: 50px;
-    background: linear-gradient(145deg, #00f0ff, #00d9ff);
+    background-color: #00c6ff;
     border-radius: 12px;
-    border: 3px solid #0ff;
-    box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, inset 0 0 5px #0ff;
+    border: 3px solid #00c6ff;
+    box-shadow: 0 0 10px #00c6ff, inset 0 0 5px #00c6ff;
     transition: all 0.2s ease-in-out;
 }
 
 a:hover {
     transform: scale(1.07);
-    box-shadow: 0 0 15px #0ff, 0 0 30px #0ff, inset 0 0 8px #0ff;
+    box-shadow: 0 0 20px #00c6ff, inset 0 0 8px #00c6ff;
 }
 
 a:active {
     transform: scale(0.95);
-    box-shadow: 0 0 5px #0ff, 0 0 10px #0ff, inset 0 0 2px #0ff;
+    box-shadow: 0 0 8px #00c6ff, inset 0 0 3px #00c6ff;
 }
 
 .nav-Text {
@@ -101,46 +90,31 @@ a:active {
 /* SEÇÕES */
 #Home,
 #banner,
-#AboutMe {
-    width: 100%;
-    max-width: 1200px;
-    /* Largura máxima em desktops */
-    padding: 2rem;
-    /* Espaçamento interno */
-    box-sizing: border-box;
-    /* Garante que padding não estoure a largura */
-    margin: 0 auto;
-    /* Centraliza em telas grandes */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-}
-
-#Trailer {
-    width: 100%;
-}
-
+#AboutMe,
 #trailer {
     width: 100%;
     max-width: 1200px;
-    /* permite boa largura em telas grandes */
     padding: 2rem;
+    box-sizing: border-box;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    box-sizing: border-box;
+}
+
+#Trailer,
+#Contato {
+    width: 100%;
 }
 
 #Hambutton {
     width: 40%;
     display: none;
 }
-#Hamburger{
+
+#Hamburger {
     transition: all 0.4s ease-in-out;
 }
 
@@ -151,10 +125,6 @@ a:active {
     justify-content: space-evenly;
     align-items: center;
     gap: 1rem;
-}
-
-#Contato {
-    width: 100%;
 }
 
 #foot {
@@ -228,46 +198,21 @@ a:active {
     background-color: #f9f9f9;
     border: 5px solid #00c6ff;
     box-shadow: 0 0 12px 3px rgba(0, 198, 255, 0.4);
-    padding: 25px 0;
+    padding: 25px 20px;
     display: grid;
     gap: 20px;
     justify-items: center;
-    /* Centraliza os itens nas colunas */
     align-items: center;
-    /* Centraliza os itens nas linhas (caso necessário) */
-}
-
-.card-View-fans {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 25px 20px;
-    /* ← inclui padding lateral */
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    /* ou mais, conforme o conteúdo */
-    grid-auto-rows: auto;
-    gap: 20px;
-    background-color: #f9f9f9;
-    border: 5px solid #00c6ff;
-    border-radius: 15px;
-    box-shadow: 0 0 12px 3px rgba(0, 198, 255, 0.4);
 }
 
 .card-View {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 25px 20px;
-    /* ← Adiciona padding lateral */
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 350px);
-    gap: 20px;
-    background-color: #f9f9f9;
-    border: 5px solid #00c6ff;
-    border-radius: 15px;
-    box-shadow: 0 0 12px 3px rgba(0, 198, 255, 0.4);
+}
+
+.card-View-fans {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: auto;
 }
 
 /* CARDS */
@@ -287,7 +232,6 @@ a:active {
     cursor: pointer;
 }
 
-
 .Cardimage {
     width: 100%;
     height: 100%;
@@ -299,7 +243,6 @@ a:active {
 .card-text {
     position: absolute;
     bottom: -100%;
-    /* Esconde o texto inicialmente */
     background: rgba(0, 0, 0, 0.7);
     color: white;
     width: 100%;
@@ -312,7 +255,6 @@ a:active {
 
 .Teste:hover .card-text {
     bottom: 0;
-    /* Mostra o texto quando o mouse passa por cima */
 }
 
 .Teste-fans:hover {
@@ -374,13 +316,12 @@ a:active {
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto;
-    background: rgba(17, 1, 255, 0.705);
+    background: #2c0e5a;
     padding: 20px;
     border-radius: 12px;
     border: 2px solid #00c6ff;
     box-shadow: 0 0 12px rgba(0, 198, 255, 0.3);
 }
-
 
 #Formulario {
     width: 100%;
@@ -410,13 +351,12 @@ a:active {
         flex-direction: column;
         display: none;
     }
-    a{
+    a {
         width: 80%;
     }
-    .nav-Text{
+    .nav-Text {
         font-size: large;
     }
-
     #Hambutton {
         display: block;
     }
@@ -426,23 +366,19 @@ a:active {
     .teste-fans-texto {
         font-size: 0.7rem;
     }
-
     .teste-fans-image {
         width: 150px;
         height: 150px;
     }
-
     .card-View {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, 280px);
         padding: 20px 10px;
     }
-
     .card-View-fans {
         grid-template-columns: 1fr;
         padding: 20px 15px;
     }
-
     #Home,
     #banner,
     #trailer,
@@ -455,34 +391,28 @@ a:active {
     .teste-fans-texto {
         font-size: 0.6rem;
     }
-
     .teste-fans-image {
         width: 120px;
         height: 120px;
     }
-
     header,
     main,
     footer {
         padding: 1rem;
     }
-
     .card-View {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, 250px);
         gap: 15px;
     }
-
     #formulario {
         padding: 15px;
     }
-
     #formulario input,
     #formulario textarea {
         font-size: 0.9rem;
         padding: 10px;
     }
-
     #formulario input[type="submit"] {
         font-size: 0.9rem;
     }
