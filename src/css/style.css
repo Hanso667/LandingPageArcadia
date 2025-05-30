@@ -101,7 +101,10 @@ a:active {
 }
 
 #foot {
-    height: 200px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* GRIDS */
@@ -201,6 +204,20 @@ a:active {
     max-width: 100%;
 }
 
+#Formulario {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#Mensagem {
+    width: 80%;
+    height: 80px;
+}
+
 
 /* MEDIA QUERIES PARA RESPONSIVIDADE */
 
@@ -260,6 +277,8 @@ a:active {
         width: 330px;
         font-size: small;
     }
+
+
 
 
 }
